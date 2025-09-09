@@ -1,134 +1,113 @@
----
+🧑‍💻 Job Board App
 
-# Build a Job Board App with Next.js & Prisma
+A full-stack job board platform built with Next.js 13 (App Router), NextAuth.js, Prisma, and PostgreSQL.
+This project allows users to sign in with GitHub, browse job postings, create new job listings, apply to jobs, and manage applications through a personal dashboard.
 
-<div align="center">
-  <br />
-  <a href="https://youtu.be/YOUR_VIDEO_ID" target="_blank">
-    <img src="https://github.com/user-attachments/assets/46671cca-93aa-4c99-b965-b7030fbed4d6" alt="Job Board App Banner">
-  </a>
-  <br />
-  <div>
-    <img src="https://img.shields.io/badge/-Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" />
-    <img src="https://img.shields.io/badge/-Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white" alt="Prisma" />
-    <img src="https://img.shields.io/badge/-PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
-    <img src="https://img.shields.io/badge/-React_Hooks-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React Hooks" />
-    <img src="https://img.shields.io/badge/-TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss" alt="Tailwind CSS" />
-  </div>
-  <h3 align="center">Build a Job Board App with Next.js, Prisma, PostgreSQL, and TailwindCSS</h3>
-  <div align="center">
-    Follow the full video tutorial on 
-    <a href="https://youtu.be/YOUR_VIDEO_ID" target="_blank"><b>YouTube</b></a>
-  </div>
-  <br />
-</div>
+The app is designed with modern UI principles using Tailwind CSS and ensures scalability and maintainability with Prisma ORM and Next.js server actions.
 
-## 📋 Table of Contents
+✨ Features
+👤 User Features
 
-1. [Introduction](#-introduction)
-2. [Tech Stack](#-tech-stack)
-3. [Features](#-features)
-4. [Quick Start](#-quick-start)
-5. [Screenshots](#-screenshots)
-6. [Deployment](#-deployment)
+Authentication with GitHub using NextAuth.js (secure OAuth integration).
 
----
+Browse jobs with filtering options:
 
-## 🚀 Introduction
+Search by title, company, or description
 
-In this tutorial, you'll learn how to build a modern **Job Board App** using **Next.js**, **Prisma**, **PostgreSQL**, and **TailwindCSS**. You'll cover **real-world database relations, complex queries, and a complete CRUD workflow**, and implement **dynamic search filters** and **user applications**.
+Filter by job type (Full-time, Part-time, Contract, Internship)
 
-🎥 Watch the full tutorial: [YouTube](https://youtu.be/YOUR_VIDEO_ID)
+Filter by location
 
----
+Job applications:
 
-## ⚙️ Tech Stack
+Apply directly to job postings
 
-* **Next.js 15** – For building the React fullstack app with server components
-* **Prisma** – For database ORM and relations
-* **PostgreSQL** – As the relational database
-* **TailwindCSS** – For styling with utility-first CSS
-* **React Hooks** – For managing client-side state & interactivity
-* **TypeScript** – Type safety and tooling
-* **NextAuth** or custom session handling – For user authentication (depending on your implementation)
+Prevent duplicate applications (one per job per user)
 
----
+Track application status (PENDING, ACCEPTED, REJECTED)
 
-## ⚡️ Features
+Dashboard:
 
-* 📝 **Post Job Offers**
-  Authenticated users can post new job offers with title, description, type, and location.
+View jobs you’ve applied to
 
-* 🔍 **Advanced Search**
-  Filter jobs by **keyword**, **type** (Full-time, Part-time, Contract), and **location** — all with Prisma query filters.
+Track application statuses
 
-* 👤 **User Dashboard**
-  Users can view their posted jobs and see how many applicants each job has received.
+Manage jobs you’ve posted
 
-* ✅ **Job Applications**
-  Users can apply for any job. The dashboard lists all applications with statuses.
+🛠️ Employer Features
 
-* 🔄 **Dynamic Routes & Pages**
-  Each job has its own dynamic detail page with full information and "Apply" button.
+Post new job listings with details:
 
-* 🔐 **Authentication & Authorization**
-  Users must be signed in to post jobs or apply for them.
+Title, Company, Location, Type, Description, Salary
 
----
+Manage posted jobs:
 
-## 👌 Quick Start
+Track applications count
 
-### Prerequisites
+View job details in dashboard
 
-* [Node.js](https://nodejs.org/)
-* [PostgreSQL Database](https://www.postgresql.org/)
-* [Prisma CLI](https://www.prisma.io/docs/getting-started)
-* [Next.js](https://nextjs.org/)
+🎨 UI/UX
 
-### Clone and Run
+Responsive design: fully mobile-friendly navigation and layouts
 
-```bash
-git clone https://github.com/yourusername/job-board-next-prisma.git
-cd job-board-next-prisma
-npm install
+Navbar:
 
-# Configure your database in .env
-npx prisma generate
-npx prisma migrate dev
+Links adapt based on user session (Sign in / Sign out + Dashboard links)
 
-npm run dev
-```
+Job Cards: clean previews of job information with quick links
 
-Your app will be available at: [http://localhost:3000](http://localhost:3000)
+Apply Button with dynamic states (loading, success, error)
 
----
+🛠️ Tech Stack
 
-## 🖼️ Screenshots
-<img width="1347" alt="Home" src="https://github.com/user-attachments/assets/dcde382d-f842-4493-af5e-0b956cb89b46" />
-<img width="1243" alt="Dashboard" src="https://github.com/user-attachments/assets/29da6fbc-6b8c-4475-88ad-a9b700461401" />
+Framework: Next.js 13+
+ (App Router, Server Components, Server Actions)
 
----
+Authentication: NextAuth.js
+ (JWT sessions, GitHub provider)
 
-## ☁️ Deployment
+Database: PostgreSQL (relational database)
 
-### Deploy on Vercel
+ORM: Prisma
 
-1. Push your code to GitHub
-2. Go to [Vercel](https://vercel.com/)
-3. Import your repository
-4. Set up your database connection in Vercel Environment Variables
-5. Click **Deploy**
+Styling: Tailwind CSS
 
-Your live app will be hosted on a custom subdomain (e.g. `https://your-job-board.vercel.app`)
+Icons: Lucide React
 
----
+Utilities:
 
-## 🔗 Useful Links
+date-fns
+ for time formatting
 
-* [Next.js Documentation](https://nextjs.org/docs)
-* [Prisma Documentation](https://www.prisma.io/docs)
-* [PostgreSQL Docs](https://www.postgresql.org/docs/)
-* [Tailwind CSS Docs](https://tailwindcss.com/)
-* [Vercel](https://vercel.com/)
+axios
+ for API requests
 
----
+📂 Project Structure
+.
+├── app/
+│   ├── jobs/           # Job listing, details, posting form
+│   ├── dashboard/      # User dashboard (applications + posted jobs)
+│   ├── auth/           # Auth pages (sign in)
+│   └── layout.tsx      # Root layout (providers, navbar, etc.)
+│
+├── components/         # UI components (Navbar, ApplyButton, etc.)
+├── lib/                # Prisma client & auth actions
+├── prisma/             # Prisma schema & migrations
+├── public/             # Static assets (logo, images, etc.)
+└── README.md
+
+🗄️ Database Schema
+
+Using Prisma, the main models are:
+
+User – Registered users (via GitHub OAuth)
+
+Account – Linked provider accounts (NextAuth requirement)
+
+Session – User sessions (NextAuth requirement)
+
+Job – Job postings with relations to User (postedBy)
+
+Application – Applications submitted by users to jobs
+
+VerificationToken – Token management (NextAuth requirement)
