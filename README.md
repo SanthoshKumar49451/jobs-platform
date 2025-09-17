@@ -82,19 +82,7 @@ date-fns
 axios
  for API requests
 
-📂 Project Structure
-.
-├── app/
-│   ├── jobs/           # Job listing, details, posting form
-│   ├── dashboard/      # User dashboard (applications + posted jobs)
-│   ├── auth/           # Auth pages (sign in)
-│   └── layout.tsx      # Root layout (providers, navbar, etc.)
-│
-├── components/         # UI components (Navbar, ApplyButton, etc.)
-├── lib/                # Prisma client & auth actions
-├── prisma/             # Prisma schema & migrations
-├── public/             # Static assets (logo, images, etc.)
-└── README.md
+
 
 🗄️ Database Schema
 
