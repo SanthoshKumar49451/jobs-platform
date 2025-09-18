@@ -8,3 +8,6 @@ export const { auth } = NextAuth({
 });
 
 
+export default auth
+
+
